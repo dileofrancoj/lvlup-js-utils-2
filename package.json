@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "lint": "eslint . --ext .ts",
-    "check:types": "tsc --noEmit"
+    "prepare": "husky install",
+    "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
@@ -19,6 +19,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "typescript": "*",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "husky": "^8.0.0"
   }
 }
