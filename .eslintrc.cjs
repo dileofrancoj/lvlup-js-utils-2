@@ -23,7 +23,7 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": ["simple-import-sort"],
-    "ignorePatterns": [".eslintrc.cjs", "vite.config.ts", "dist", "node_modules"],
+    "ignorePatterns": [".eslintrc.cjs", "vite.config.ts", "dist", "node_modules", "commitlint.config.cjs"],
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
