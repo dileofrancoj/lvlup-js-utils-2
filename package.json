@@ -1,19 +1,22 @@
 {
   "name": "lvlup-js-utils",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
     "check:types": "tsc --noEmit",
     "prepare": "husky install",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest --watch"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@types/node": "^20.14.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "eslint-plugin-import": "^2.25.2",
@@ -23,6 +26,7 @@
     "husky": "^8.0.0",
     "typescript": "*",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
   }
 }
