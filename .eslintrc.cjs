@@ -20,10 +20,11 @@ module.exports = {
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": ["simple-import-sort"],
-    "ignorePatterns": [".eslintrc.cjs", "vite.config.ts", "dist", "node_modules", "commitlint.config.cjs"],
+    "ignorePatterns": [".eslintrc.cjs", "dist", "node_modules"],
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
