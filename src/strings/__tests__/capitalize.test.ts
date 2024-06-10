@@ -1,4 +1,4 @@
-import { capitalize } from '../capitalize'
+import { capitalize } from '@src/strings/capitalize'
 
 describe('capitalize', () => {
   it.each([
