@@ -1,6 +1,5 @@
-import { includes } from '../includes'
-
 // hola, ho -> true
+import { includes } from '../includes'
 describe('includes', () => {
   it('includes("hola", "ho") should be true', () => {
     expect(includes('hola', 'ho')).toBe(true)
