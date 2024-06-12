@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+reports/
 node_modules
 dist
 dist-ssr
@@ -22,3 +22,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# stryker temp files
+.stryker-tmp
