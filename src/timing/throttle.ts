@@ -9,8 +9,7 @@ function greet(name: string, age: number): number {
 type greetTypes = Parameters<typeof greet>
 type returnFnGreet = ReturnType<typeof greet>
  */
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const throttle = <T extends AnyFunction>(fn: T, delay: number = 500) => {
+export function throttle<T extends AnyFunction> (fn: T, delay: number = 500): (...args: Parameters<T>) => void {
   let timeOutId: ReturnType<typeof setTimeout> | undefined // NodeJS.Timeout
   return function throttledFn (...args: Parameters<T>) {
     if (timeOutId !== undefined) {
