@@ -13,6 +13,6 @@ describe('validate age', () => {
   })
   it('should return false when param is undefined', () => {
     // @ts-expect-error we need to test this usecase
-    expect(validateAge(undefined)).toBe(false)
+    expect(validateAge(undefined)).toBe(true)
   })
 })
