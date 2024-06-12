@@ -1,0 +1,28 @@
+name: Main workflow
+
+on: [pull_request] # la acción que dispara la acción
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x] # en todas las versiones que se va a probar esto
+
+    steps:
+      - uses: actions/checkout@v2 # clonar el repo
+      - name: Use Node.js ${{ matrix.node-version }}
+      #  Esta acción es fundamental para proyectos que dependen de Node.js, ya que garantiza que la versión correcta de Node.js esté instalada y disponible para los comandos subsecuentes.
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Clean up node_modules and package-lock.json
+        run: |
+          rm -rf node_modules package-lock.json yarn-lock.json
+      - name: npm install
+        run: npm install
+      - name: Run test and report issues
+        run: npm test
+      - name: Build
+        run: npm run build
