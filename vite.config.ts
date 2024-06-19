@@ -21,5 +21,5 @@ export default defineConfig({
       '@src': resolve(__dirname, '/src')
     }
   },
-  plugins: [dts({ outDir: 'dist', exclude: '**/*.test.ts' }), viteTsConfigPaths()]
+  plugins: [dts({ outDir: 'dist', exclude: ['**/*.test.ts', 'tests/', 'vitest.config.*'] }), viteTsConfigPaths()]
 })
