@@ -1,8 +1,21 @@
 {
   "name": "lvlup-js-utils",
-  "private": true,
   "version": "0.0.1",
   "type": "module",
+  "main": "./dist/lvlup-js-utils.umd.cjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lvlup-js-utils.js",
+      "export": "./dist/lvlup-js-utils.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "check:types": "tsc --noEmit",
